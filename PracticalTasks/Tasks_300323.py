@@ -67,7 +67,36 @@
 
 # acc = BankAccount(97500001234, 50, "Olia Bali")
 # acc.deposit(20.50)
-# acc.withdrawn=(10.50)
+# acc.withdrawn(10.50)
+# acc.account_info()
+
+# from Monday session:
+
+# class BankAccount:
+#     account:int
+#     balance:float
+#     owner:str
+
+#     def __init__(self, account, balance, owner):
+#         self.account = account
+#         self.balance = balance
+#         self.owner = owner 
+    
+#     def deposit(self, deposit):
+#         self.balance += deposit
+    
+#     def withdrawn(self, withdrawn):
+#         if withdrawn > self.balance:
+#             print("Not possible to withdraw")
+#         else:
+#             self.balance -= withdrawn
+    
+#     def account_info(self):
+#         print(f"Account {self.account} owner is {self.owner}, current balance is {acc.balance}.")
+
+# acc = BankAccount(97500001234, 50, "Olia Bali")
+# acc.deposit(20.50)
+# acc.withdrawn(40.50)
 # acc.account_info()
 
 # 4.Create a class named Person that has the following attributes: name, age, and address. 
@@ -151,7 +180,30 @@
 # For I/O:
 # 8.Write a Python program that reads a JSON file containing a list of dictionaries, sorts the list by a specific key, and writes the sorted list back to the file.
 
-# -
+import json
+
+data = [
+    {"name": "Krista", "last_name": "Gana", "age": 27}, {"name": "Liana", "last_name": "Krav", "age": 19}, {"name": "Arturs", "last_name": "Zim", "age": 18},
+    {"name": "Kristiana", "last_name": "G", "age": 37}, {"name": "Liga", "last_name": "Loc", "age": 55}
+    ]
+
+with open("data.json", "w") as f:
+    json.dump(data, f)
+
+with open("data.json", "r") as f:
+    data = json.load(f)
+    f.close()
+
+with open("sor_data.json", "w") as f:
+    json.dump(data, f)
+
+with open("sor_data.json", "r") as f:
+    data = json.load(f)
+
+data_sort = sorted(data, key = lambda x: x['age']) 
+
+with open("sor_data.json", "w") as f:
+    json.dump(data_sort, f)
 
 # 9.Write a Python program that reads a CSV file containing student grades, calculates their average score, and writes the average to a new file.
 
