@@ -70,7 +70,7 @@
 # acc.withdrawn(10.50)
 # acc.account_info()
 
-# from Monday session:
+# ===from Monday session===
 
 # class BankAccount:
 #     account:int
@@ -180,31 +180,44 @@
 # For I/O:
 # 8.Write a Python program that reads a JSON file containing a list of dictionaries, sorts the list by a specific key, and writes the sorted list back to the file.
 
-import json
+# import json
 
-data = [
-    {"name": "Krista", "last_name": "Gana", "age": 27}, {"name": "Liana", "last_name": "Krav", "age": 19}, {"name": "Arturs", "last_name": "Zim", "age": 18},
-    {"name": "Kristiana", "last_name": "G", "age": 37}, {"name": "Liga", "last_name": "Loc", "age": 55}
-    ]
+# data = [
+#     {"name": "Krista", "last_name": "Gana", "age": 27}, {"name": "Liana", "last_name": "Krav", "age": 19}, {"name": "Arturs", "last_name": "Zim", "age": 18},
+#     {"name": "Kristiana", "last_name": "G", "age": 37}, {"name": "Liga", "last_name": "Loc", "age": 55}
+#     ]
 
-with open("data.json", "w") as f:
-    json.dump(data, f)
+# with open("data.json", "w") as f:
+#     json.dump(data, f)
 
-with open("data.json", "r") as f:
-    data = json.load(f)
-    f.close()
+# with open("data.json", "r") as f:
+#     data = json.load(f)
+#     f.close()
 
-with open("sor_data.json", "w") as f:
-    json.dump(data, f)
+# with open("sor_data.json", "w") as f:
+#     json.dump(data, f)
 
-with open("sor_data.json", "r") as f:
-    data = json.load(f)
+# with open("sor_data.json", "r") as f:
+#     data = json.load(f)
 
-data_sort = sorted(data, key = lambda x: x['age']) 
+# data_sort = sorted(data, key = lambda x: x['age']) 
 
-with open("sor_data.json", "w") as f:
-    json.dump(data_sort, f)
+# with open("sor_data.json", "w") as f:
+#     json.dump(data_sort, f)
 
+# ===from Monday session===
+
+# import json
+
+# key = "age"
+# with open("data.json", "r") as f:
+#     data = json.load(f)
+
+# data.sort(key=lambda data:data[key])
+              
+# with open("data.json","w") as f:
+#     json.dump({"persons":data},f)
+ 
 # 9.Write a Python program that reads a CSV file containing student grades, calculates their average score, and writes the average to a new file.
 
 # -
